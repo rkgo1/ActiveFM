@@ -1,0 +1,109 @@
+
+    <DOCTYPE! html>
+    
+
+        <head>
+           
+            <title>Active FM 
+    
+            </title>
+            <link rel="icon" type="image/x-icon" href="/images/podcast.png">
+            <link rel="stylesheet" href="stylesheet.css">
+    
+        </head>
+        
+    
+        <body>
+            <header>
+                <div class="top-strip">
+                    <div> 084 628 6060</div>
+    
+                    <div> activefm@activemi.co.za </div>
+                    <div>26A Loveday Street South Selby, Johannesburg South Africa</div>
+    
+                </div>
+                <div class="nav-bar">
+                    <a href="index.html"><img src="/images/main-logo.png" alt="active fm logo"></a>
+                    <a href="index.html"><button  type="button" ><a >Home</a></span>
+                    </button>
+                    <a href="shows.html"></a><button>Shows</button></a>
+                    <a href="live.html"><button>Live</button></a>
+                    <a href="about.html"><button>About</button></a>
+    
+                    <div class="nav-bar-right">
+                        <div>
+                            <a href="https://www.instagram.com/activefm777/"><img src="/images/instagram-dark.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/channel/UChNIUx19XJrIOm5UGYAqkYQ"><img src="/images/youtube.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/activefmonlineradio"><img src="/images/facebook-dark.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://open.spotify.com/show/7IqUjTiAg6jS1tgLcRL6ag"><img src="/images/spotify.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://podcasts.apple.com/za/podcast/we-are-live/id1478735597"><img src="/images/apple.png"></a>
+                        </div>
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox" checkedx>
+                                <span class="slider round"></span>
+                              </label>
+                        </div>
+                        <div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </header>
+
+
+
+           <body>
+
+<script>
+
+    $(function() {
+
+
+   var shows = [];
+
+   $.getJSON('people.json', function(data) {
+       $.each(data.person, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "userdata" border="2">
+  <thead>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+
+</body>
+</html>
+           </body> 
+    </html>
